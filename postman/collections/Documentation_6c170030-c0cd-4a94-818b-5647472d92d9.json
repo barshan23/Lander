@@ -1,0 +1,78 @@
+{
+    "info": {
+        "_postman_id": "aba57222-4614-430a-805d-2ef6d28a1864",
+        "name": "Documentation",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "List all pets",
+            "id": "f6b31a3b-ddf9-4783-82bb-70c308894084",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{baseUrl}}/pets?limit=32571900",
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "path": [
+                        "pets"
+                    ],
+                    "query": [
+                        {
+                            "description": "How many items to return at one time (max 100)",
+                            "key": "limit",
+                            "value": "32571900"
+                        }
+                    ]
+                }
+            },
+            "response": [
+                {
+                    "id": "63632589-e6ea-4fb9-8b60-b2706122671d",
+                    "name": "unexpected error",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/pets?limit=<integer>",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "pets"
+                            ],
+                            "query": [
+                                {
+                                    "key": "limit",
+                                    "value": "<integer>"
+                                }
+                            ]
+                        }
+                    },
+                    "status": "Internal Server Error",
+                    "code": 500,
+                    "_postman_previewlanguage": "Text",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "{\n \"code\": 71490719,\n \"message\": \"nisi amet laboris proident do\"\n}"
+                }
+            ]
+        }
+    ],
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "value": "http://petstore.swagger.io/v1",
+            "type": "string"
+        }
+    ]
+}
